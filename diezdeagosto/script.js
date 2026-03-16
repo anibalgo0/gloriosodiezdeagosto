@@ -296,3 +296,32 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// IMAGENES AUTOMATICAS COMUNIDAD EDUCATIVA
+const imagenesQS = [
+"exp/computersupport.jpg",
+"exp/computersecurity.jpg",
+"exp/financial_and_accountingmanagement.jpg",
+"exp/physicalactivity.jpg"
+];
+
+let indiceQS = 0;
+
+const imagenQS = document.querySelector(".cuadro-grande .promociones-img img");
+
+function rotarImagenQS(){
+
+if(!imagenQS) return;
+
+indiceQS++;
+
+if(indiceQS >= imagenesQS.length){
+    indiceQS = 0;
+}
+
+imagenQS.src = imagenesQS[indiceQS];
+
+}
+
+// cambiar cada 10 segundos
+setInterval(rotarImagenQS, 10000);
