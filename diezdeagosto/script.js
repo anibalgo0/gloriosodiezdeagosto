@@ -110,7 +110,7 @@ function mostrarOfertas(){
 const imagenesInicio = [
 "imgue/uediezvinces.jpg",
 //cambiar images auto
-"imgue/uediezvinces.jpg",
+"imgue/juramentouediez.jpg",
 "imgue/uediezvinces.jpg"
 ];
 
