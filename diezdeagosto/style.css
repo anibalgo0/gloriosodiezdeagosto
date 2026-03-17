@@ -103,12 +103,17 @@ nav ul li a::after{
     width:0%;
     height:2px;
     bottom:-5px;
-    left:0;
+    left:50%;
+    transform: translateX(-50%);
     background: linear-gradient(45deg,#c2c6df86,#ffffff);
     transition:0.4s;
 }
 
 nav ul li a:hover::after{
+    width:100%;
+}
+
+#nav-links a.activo::after{
     width:100%;
 }
 
@@ -992,4 +997,35 @@ body{
 footer{
     position: relative;
     z-index: 10;
+}
+
+@media (max-width:768px){
+
+    .cuadro-grande{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .cuadro-grande i{
+        margin-bottom:10px;
+    }
+
+    .cuadro-grande div{
+        width:100%;
+    }
+
+    .promociones-img{
+        margin-top:15px;
+        width:100%;
+    }
+
+    .promociones-img img{
+        width:100%;
+        height:auto;
+        border-radius:10px;
+        object-fit:cover;
+    }
+
 }

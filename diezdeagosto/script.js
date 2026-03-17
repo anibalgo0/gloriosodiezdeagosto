@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const destino = this.getAttribute("href").replace("#", "");
             mostrarSeccion(destino);
-
+            
             // cerrar menú móvil
             navLinks.classList.remove("active");
         });
@@ -326,3 +326,31 @@ imagenQS.src = imagenesQS[indiceQS];
 // cambiar cada 10 segundos
 setInterval(rotarImagenQS, 10000);
 
+document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", function(){
+
+        // quitar activo a todos
+        document.querySelectorAll("#nav-links a").forEach(l => l.classList.remove("activo"));
+
+        // activar solo el que tocaste
+        this.classList.add("activo");
+    });
+});
+
+function actualizarActivo(){
+    const actual = window.location.hash.replace("#","");
+
+    document.querySelectorAll("#nav-links a").forEach(link=>{
+        link.classList.remove("activo");
+
+        if(link.getAttribute("href") === "#" + actual){
+            link.classList.add("activo");
+        }
+    });
+}
+
+// ejecutar al cargar
+window.addEventListener("load", actualizarActivo);
+
+// ejecutar cuando cambie sección
+window.addEventListener("hashchange", actualizarActivo);
