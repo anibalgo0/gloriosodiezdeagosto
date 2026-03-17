@@ -299,10 +299,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // IMAGENES AUTOMATICAS COMUNIDAD EDUCATIVA
 const imagenesQS = [
-"exp/computersupport.jpg",
-"exp/computersecurity.jpg",
-"exp/financial_and_accountingmanagement.jpg",
-"exp/physicalactivity.jpg"
+"imgue/directuediez.jpg",
+"imgue/nombre.jpg",
+"imgue/nombre.jpg",
+"imgue/nombre.jpg"
 ];
 
 let indiceQS = 0;
