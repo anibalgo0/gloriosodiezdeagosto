@@ -132,7 +132,7 @@ if(indexInicio >= imagenesInicio.length){
 
 }
 
-setInterval(cambiarImagenInicio, 5000);
+setInterval(cambiarImagenInicio,8000);
 
 cambiarImagenInicio();
 
@@ -146,7 +146,7 @@ seccion.style.display = "block";
 /* después de 15 segundos se oculta */
 setTimeout(function(){
     seccion.style.display = "none";
-}, 15000);
+}, 20000);
 
 }
 
@@ -325,3 +325,4 @@ imagenQS.src = imagenesQS[indiceQS];
 
 // cambiar cada 10 segundos
 setInterval(rotarImagenQS, 10000);
+
