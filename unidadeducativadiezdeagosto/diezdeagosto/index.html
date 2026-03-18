@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.E Diez de Agosto Vinces</title>
+    <link rel="icon" type="image/png" href="imgue/logcircue.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net" />
+    <script src="https://cdn.jsdelivr.net"></script>
+
+</head>
+<body>
+   <!-- BODY SUPERIOR -->
+    <header>
+        <div class="logo-container" onclick="scrollToSection('historia')">
+            <img src="imgue/logue.png" alt="logoUEA" class="logo-img">
+            <span class="logo-text">UNIDAD EDUCATIVA DIEZ DE AGOSTO</span>
+        </div>
+
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#inicio">Principal</a></li>
+                <li><a href="#institucion">Quienes Somos</a></li>
+                <li><a href="#mision">Misión/Visión</a></li>
+                <li><a href="#admisiones">Ofertas Educativas</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#contacto">Conéctate</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- INICIO-->
+    <section id="inicio" class="inicio">
+        <h3>"Estudia y Venceras"</h3>
+        <h1>GLORIOSO DIEZ DE AGOSTO</h1>
+        <p>Formando líderes con excelencia académica.</p>
+        <button onclick="scrollToSection('admisiones')">Ver Ofertas Educativas</button>
+    </section>
+
+    <!-- INSTITUCION -->
+    <section id="institucion" class="section">
+        <h2>Quiénes Somos</h2>
+        <p>Educación integral con valores y disciplina.</p>
+
+        <div class="quienes-grid">
+
+            <div class="cuadro">
+                <i class="fas fa-heart"></i>
+                <div>
+                    <h3>Valores</h3>
+                    <p>Fomentamos respeto, responsabilidad y excelencia.</p>
+                </div>
+            </div>
+
+            <div class="cuadro">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div>
+                    <h3>Equipo</h3>
+                    <p>Docentes comprometidos con la formación integral.</p>
+                </div>
+            </div>
+
+           <div class="cuadro">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>Familias</h3>
+                    <p>La familia es parte fundamental del proceso educativo.</p>
+                </div>
+            </div>
+
+    
+            
+            <div class="cuadro">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <h3>Estudiantes</h3>
+                    <p>Formamos jóvenes con valores y excelencia académica.</p>
+                </div>
+            </div>
+
+           <div class="cuadro cuadro-grande" onclick="expandirCuadro(this)">
+                <i class="fas fa-building"></i>
+                <div>
+                    <h3>Comunidad Educativa</h3>
+                    <p>
+                        Nuestra institución trabaja junto a estudiantes,
+                        docentes y familias para crear un ambiente
+                        educativo basado en valores, disciplina
+                        y excelencia académica.
+                    </p>
+                </div>
+
+                <div class="promociones-img">
+                    <img src="imgue/directuediez.jpg" onclick="event.stopPropagation(); abrirGaleriaQS(this)" data-texto="JURAMENTO DE LA BANDERA">
+                    <!--Agregar mas images-->
+
+                </div>
+            </div>
+
+            <div class="cuadro">
+                <i class="fas fa-trophy"></i>
+                <div>
+                    <h3>Logros</h3>
+                    <p>Nuestros estudiantes destacan en actividades académicas.</p>
+                </div>
+            </div>
+
+            <div class="cuadro">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <h3>Innovación</h3>
+                    <p>Promovemos el uso de tecnología y nuevas metodologías de aprendizaje.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MISION Y VISION -->
+    <section id="mision" class="section bg-light">
+        <h2>Misión y Visión</h2>
+        <div class="cuadros-mv">
+            <div class="cuadro">
+                <i class="fas fa-bullseye"></i>
+                <div>
+                    <h3>Misión</h3>
+                    <p>Brindar educación de calidad.</p>
+                </div>
+            </div>
+
+            <div class="cuadro">
+                <i class="fas fa-eye"></i>
+                <div>
+                    <h3>Visión</h3>
+                    <p>Ser líderes en excelencia académica.</p>
+                </div>
+            </div>
+
+            <div class="cuadro">
+                <i class="fas fa-book"></i>
+                <div>
+                    <h3>Formación</h3>
+                    <p>Desarrollar habilidades académicas y valores.</p>
+                </div>
+            </div>
+
+            <div class="cuadro">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>Comunidad</h3>
+                    <p>Fomentar la participación y el respeto.</p>
+                </div>
+            </div>
+        </div>
+        <!-- SECCION DECE -->
+        <button class="btn-dece" onclick="mostrarDECE()">DECE</button>
+        <div id="contenido-dece" style="display:none; margin-top:40px;">
+            <h2>Departamento de Consejería Estudiantil</h2>
+            <div class="galeria-dece">
+                <div class="slide"><img src="deceinfo/donacionunfordece.jpg" onclick="abrirImagen(this)" data-texto="INFORMACION DECE"></div>
+                <div class="slide"><img src="deceinfo/donacionunfordece.jpg" onclick="abrirImagen(this)" data-texto="INFORMACION DECE"></div>
+                <div class="slide"><img src="deceinfo/donacionunfordece.jpg" onclick="abrirImagen(this)" data-texto="INFORMACION DECE"></div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMISIONES-->
+    <section id="admisiones" class="section">
+        <h2>¡Conoce lo que tenemos para ti! </h2>
+        <div class="tabs-admisiones">
+            <button onclick="mostrarPromociones()">Especialidades</button>
+            <button onclick="mostrarOfertas()">Mas detalles</button>
+        </div>
+        <!-- CONTENIDO PROMOCIONES -->
+        <div id="contenido-promociones">
+            <h4>Explora las especialidades</h4>
+            <div class="promociones-img">
+                <img src="exp/computersupport.jpg" onclick="abrirImagen(this)" data-texto="SOPORTE INFORMÁTICO">
+                <img src="exp/computersecurity.jpg" onclick="abrirImagen(this)" data-texto="SEGURIDAD INFORMÁTICA">
+                <img src="exp/financial_and_accountingmanagement.jpg" onclick="abrirImagen(this)" data-texto="GESTIÓN FINANCIERA Y CONTABLE">
+                <img src="exp/physicalactivity.jpg" onclick="abrirImagen(this)" data-texto="ACTIVIDAD FÍSICA, DEPORTE Y RECREACIÓN">
+
+            </div>
+
+        </div>
+        <!-- CONTENIDO OFERTAS -->
+        <div id="contenido-ofertas" class="formulario-admision">
+            <h4>Solicitar Información</h4>
+            <form>
+                <div class="campo">
+                    <span class="icono-formulario"><i class="fas fa-user"></i></span>
+                    <input type="text" placeholder="Nombre completo" required>
+                </div>
+                <div class="campo">
+                    <span class="icono-formulario"><i class="fas fa-envelope"></i></span>
+                    <input type="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="campo">
+                    <span class="icono-formulario"><i class="fas fa-phone"></i></span>
+                    <input type="tel" placeholder="Número de teléfono">
+                </div>
+                <div class="campo">
+                    <span class="icono-formulario"><i class="fas fa-graduation-cap"></i></span>
+                    <select>
+                        <option>Selecciona tu especialidad</option>
+                        <option>Bachillerato General</option>
+                        <option>Bachillerato Técnico</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <span class="icono-formulario"><i class="fas fa-comment"></i></span>
+                    <textarea placeholder="Mensaje...."></textarea>
+                </div>
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- HISTORIA Y GALERIA -->
+    <section id="historia" class="section bg-light">
+        <h2> Conoce Nuestra Historia </h2>
+        <!-- BOTONES -->
+        <div class="tabs">
+            <button onclick="mostrarHistoria()">Historia UEDA</button>
+            <button onclick="mostrarGaleria()">Galeria Actual</button>
+        </div>
+
+        <!-- CONTENIDO HISTORIA -->
+        <div id="contenido-historia">
+            <h2>Historia Diez de Agosto</h2>
+            <h3 class="titulo-historia">¿COMO SE CREÓ EL COLEGIO DIEZ DE AGOSTO EN VINCES?</h3>
+            <div class="historia-contenido">
+                <div class="historia-imagen"><img src="imgue/logue.png" class="logo-historia" alt="Historia del colegio"></div>
+                <div class="historia-texto">
+                    <p> Vinces estaba cerca de cumplir 100 años y no contaba con un centro de estudios secundaria, lo cual era sentido como una necesidad. Aquí surge la idea de ilustres ciudadanos amantes del progreso que iniciaron la tarea de crear un colegio, el cual conllevó más de 6 años de fallidos intentos.</p>
+                    <p> En 1944, el Concejo presidido por el Dr. Nicolás Coto Infante, por moción del Concejal Alberto Carlier resuelve gestionar el traslado a Vinces, desde Babahoyo, de una escuela complementaria porque habían muchos alumnos que terminaban la escuela y no podían seguir estudiando.</p>
+                    <p> Continuando las gestiones, el 19 de octubre de ese mismo año, el diputado Manuel Quintana ofreció hacer constar un presupuesto a fin de que funcione una escuela agrícola. El Ministerio de Educación ofreció al Dr. Coto crear al año siguiente una escuela secundaria, es decir en 1946 porque según una nueva ley, así se llamarían.</p>
+                    <p> En ese mismo año (1945), el mismo Arcadio Soto manifestó en un informe que el Ministerio de Educación negó la creación de la escuela secundaria por "pobreza fiscal".
+                    Pasó el tiempo y en septiembre de 1947, el Dr Mauro Velasquez pidió al Concejo la creación de un colegio con cultura general hasta el 4to año y los dos restantes agronomicos.</p>
+                    <p> En junio de 1948, Vinces ya tenía un nuevo concejo presidido por el Sr. Ubilla Muñoz, leyó un telegrama del Subdirector de Educación en el que se dice que el Ministerio creará un colegio y que realice el reconocimiento del lugar y condiciones para su funcionamiento.
+                    Ya en febrero de 1949, siendo Arcadio Soto presidente ocasional, manifiesta al concejo que le iba a ser difícil sostener al colegio técnico por los grandes gastos que demanda pero en vista de que el señor Mauri Velasquez ofrecía conseguir el fisco, lo tomara a partir del tercer año.
+                    Así, entre ir y venir pasaron dos años más, quizás cansados pero jamás se dieron por vencidos.</p>
+                    <p> En marzo de 1951 el nuevo concejo presidido por el Sr. Teofilo Caicedo envía un oficio al Concejo Provincial agradeciendo por haber donado 50.000 sucres para la construcción del edificio para el colegio, cuyas gestiones una vez más se habían reiniciado.
+                    Al mes siguiente el concejo acordó comprar dos solares de Jacinto Cordero y Juan Aspiazu. En esta sesión se leyó el decreto ministerial y se formó una comisión para presentar nombres de los candidatos a rector, que elabore el presupuesto para el mantenimiento.</p>
+                    <p> Ya en el mes de mayo de 1951 el Dr. Mauro Velasquez informa que logró que el Sr. Carlos Coello Icaza acepte el rectorado, quien dejó construyendo las bancas en Guayaquil.
+                    A los pocos días se dictó una ordenanza creando el colegio, al que puso el nombre de "Diez de Agosto", en honor a los efemérides de la patria.</p>
+                    <p> Acto seguido se elaboró el programa para la inauguración oficial el día 24 de mayo y se comisionó al Dr. Nicolás Coto Infante para que llevara la palabra en dicha inauguración.
+                    Al inicio este colegio funcionó en el local de Juan Bautista Flor Moran.</p>
+                    <p> Las labores iniciaron con 51 alumnos: 1o señoritas y 32 varones. La primera promoción de bachillerato se efectuó en 1957 graduándose doce estudiantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO GALERIA -->
+        <div id="contenido-galeria">
+            <h2> Galería </h2>
+            <div class="contenedor-galeria">
+                <div class="slide"><img src="imgueda2024/IMG_20260222_131245.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_131340.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_134847.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_134924.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div>
+            </div>
+            <!-- Cuadro 2 -->
+            <div class="contenedor-galeria">
+                <div class="slide"><img src="imgueda2024/IMG_20260222_135030.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_135206.jpg" onclick="abrirImagen(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_135551.jpg" onclick="abrirImagen(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_135731.jpg" onclick="abrirImagen(this)" data-texto="ESTUDIANTES AGOSTINOS"></div>
+            </div>
+            <!-- Cuadro 3 -->
+            <div class="contenedor-galeria">
+                <div class="slide"><img src="imgueda2024/IMG_20260222_140030.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_135920.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div> 
+                <div class="slide"><img src="imgueda2024/IMG_20260222_140312.jpg" onclick="abrirImagenGaleria(this)" data-texto="ESTUDIANTES AGOSTINOS"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+        <h2> Ubicación </h2>
+        <!-- MAPA -->
+        <div class="mapa">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.3540620901813!2d-79.75482962602419!3d-1.552326935972669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902cea6d688c242b%3A0xd5ad4ebcbe15895b!2sUNIDAD%20EDUCATIVA%20DIEZ%20DE%20AGOSTO.!5e0!3m2!1ses-419!2sec!4v1772218610348!5m2!1ses-419!2sec"
+                width="100%" 
+                height="350" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+       <h2> Nuestros Canales </h2>
+       <div class="social-icons">
+            <a href="https://www.facebook.com/glorioso.diezdeagosto?locale=es_LA" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </section>
+
+    <!-- BODY INFERIOR -->
+    <footer>
+        <p>Unidad Educativa Diez de Agosto | Vinces</p>
+        <p>© 2026 Derechos Reservados</p>
+        <p>Desarrollado por <a href="https://www.facebook.com/cycoonmagnate?locale=es_LA" target="_blank">Cycoon Magnate EC</a> &bull; Ing. Eduardo Muñoz</p>
+    </footer>
+
+    <div id="visorImagen" class="visor">
+        <span class="cerrar" onclick="cerrarImagen()">&times;</span>
+
+            <!-- FLECHAS DEL VISOR -->
+            <span class="flecha-izquierda" onclick="imagenAnterior()">&#10094;</span>
+            <span class="flecha-derecha" onclick="siguienteImagen()">&#10095;</span>
+
+        <img class="visor-contenido" id="imagenGrande">
+        <p id="textoImagen"></p>
+    </div>
+
+    <div id="visor-qs" class="visor-qs">
+        <span class="cerrar-qs" onclick="cerrarGaleriaQS()">&times;</span>
+        <img id="img-qs">
+        <p id="texto-qs"></p>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
